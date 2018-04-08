@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1, 
+		"image":"assets/images/Kris.jpg"
+	},
+	{
+		"id": 2, 
+		"image":"assets/images/kourtney.jpg"
+	},
+	{
+		"id": 3, 
+		"image":"assets/images/Kim.jpg"
+	},
+	{
+		"id": 4, 
+		"image": "assets/images/khloe.png"
+	},
+	{
+		"id": 5, 
+		"image": "assets/images/kendall.jpg"
+	},
+	{
+		"id": 6, 
+		"image": "assets/images/kylie.jpg"
+	},
+	{
+		"id": 7, 
+		"image": "assets/images/rob.jpg"
+	},
+	{
+		"id": 8, 
+		"image": "assets/images/Corey.jpg"
+	},
+	{
+		"id": 9, 
+		"image": "assets/images/scott.jpg"
+	},
+	{
+		"id": 10, 
+		"image": "assets/images/kanye.jpg"
+	},
+	{
+		"id": 11, 
+		"image": "assets/images/Tristan.jpg"
+	},
+	{
+		"id": 12, 
+		"image": "assets/images/travis.jpg"
+	}
+]
