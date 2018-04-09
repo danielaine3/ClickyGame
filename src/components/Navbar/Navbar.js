@@ -7,7 +7,7 @@ const Navbar = props => (
 	<div className="navbar">
 		<ul>
 			<li className="brand">
-				<a href="/">Kardashian Klick</a>
+				<a href="/">Klicking Up With The Kardashian</a>
 			</li>
 			<li className="status"></li>
 			<li className= "counts"> 
