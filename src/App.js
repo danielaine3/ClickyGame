@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Counter from "./components/Counter";
-import Score from "./components/Score";
+import Navbar from "./components/Navbar"
 import DashCard from "./components/DashCard";
 import Wrapper from "./components/Wrapper";
 import pics from "./pics.json";
@@ -10,8 +9,7 @@ class App extends Component {
 // const App = () => 
 // <wrapper>
 
-//   <Counter /> 
-//   <Score />
+  
 
 // </wrapper>
 
@@ -22,7 +20,10 @@ class App extends Component {
 
   render() {
     return (
+
       <Wrapper>
+        <Navbar /> 
+
         {this.state.pics.map(pics =>(
           <DashCard
             id={pics.id}

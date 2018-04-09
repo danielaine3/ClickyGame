@@ -1,15 +1,15 @@
 [
 	{
 		"id": 1, 
-		"image":"assets/images/Kris.jpg"
+		"image":"assets/images/kris.png"
 	},
 	{
 		"id": 2, 
-		"image":"assets/images/kourtney.jpg"
+		"image":"assets/images/kourtney.png"
 	},
 	{
 		"id": 3, 
-		"image":"assets/images/Kim.jpg"
+		"image":"assets/images/kim.png"
 	},
 	{
 		"id": 4, 
@@ -17,34 +17,34 @@
 	},
 	{
 		"id": 5, 
-		"image": "assets/images/kendall.jpg"
+		"image": "assets/images/kendall.png"
 	},
 	{
 		"id": 6, 
-		"image": "assets/images/kylie.jpg"
+		"image": "assets/images/kylie.png"
 	},
 	{
 		"id": 7, 
-		"image": "assets/images/rob.jpg"
+		"image": "assets/images/rob.png"
 	},
 	{
 		"id": 8, 
-		"image": "assets/images/Corey.jpg"
+		"image": "assets/images/corey.png"
 	},
 	{
 		"id": 9, 
-		"image": "assets/images/scott.jpg"
+		"image": "assets/images/scott.png"
 	},
 	{
 		"id": 10, 
-		"image": "assets/images/kanye.jpg"
+		"image": "assets/images/kanye.png"
 	},
 	{
 		"id": 11, 
-		"image": "assets/images/Tristan.jpg"
+		"image": "assets/images/tristan.png"
 	},
 	{
 		"id": 12, 
-		"image": "assets/images/travis.jpg"
+		"image": "assets/images/travis.png"
 	}
 ]

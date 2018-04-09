@@ -23,12 +23,7 @@ class Counter extends React.Component {
 	//The render medthod returns the JSX that should be rendered
 	render() {
 		return (
-			<div className="panel panel-primary">
-				<div className= "panel-heading">Clicky Game</div>
-				<div className= "panel-body text-center">
-					<p>Score: {this.state.count}</p>
-				</div>
-			</div>
+			<p>Score: {this.state.count}</p>
 		);
 	}
 };

@@ -21,12 +21,7 @@ class Score extends React.Component{
 	//The render method	returns the JSX that should be rendered
 	render() {
 		return (
-			// <div className="panel panel-primary">
-			// 	<div className= "panel-heading"></div>
-				<div className= "panel-body text-center">
-					<p>Top Score: {this.state.score}</p>
-				</div>
-			// </div>
+			<p>Top Score: {this.state.score}</p>
 		);
 	}
 };
