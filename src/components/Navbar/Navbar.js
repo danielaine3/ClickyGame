@@ -4,20 +4,23 @@ import Counter from "../Counter";
 import Score from "../Score";
 
 const Navbar = props => (
-	<div className="navbar">
-		<ul>
-			<li className="brand">
-				<a href="/">Klicking Up With The Kardashian</a>
-			</li>
-			<li className="status"></li>
-			<li className= "counts"> 
-				<Counter /> 
-			</li>
-			<li>
-				<Score />
-			</li>
-		</ul>
-	</div>
+	<Grid>
+		<Row>
+			<Col xs={12}>
+			<div className="navbar">
+				<ul>
+					<li className="brand">
+						<a href="/">Klicking Up With The Kardashian</a>
+					</li>
+					<li className="status"></li>
+					<li className= "counts"> 
+						<Counter />  <Score />
+					</li>
+				</ul>
+			</div>
+			</Col>
+		</Row>
+	</Grid>
 );
 
 export default Navbar;
