@@ -25,7 +25,6 @@ class App extends Component {
       <Wrapper>
         <Navbar /> 
         <Header />
-
         {this.state.pics.map(pics =>(
           <DashCard
             id={pics.id}

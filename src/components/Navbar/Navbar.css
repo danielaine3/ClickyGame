@@ -22,6 +22,7 @@ li {
 
 .brand {
 /*	width:30%;*/
+margin-left: 10px;
 	color:#FFFFFF;
 	font-size: 40px;	
 }
