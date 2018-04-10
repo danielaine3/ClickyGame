@@ -6,7 +6,7 @@ import Score from "../Score";
 const Navbar = props => (
 	<ul className="navbar">
 		<li className="brand">
-			<a href="/">Klicking Up With <br /> The Kardashian</a>
+			<a href="/">Klicking Up With <br /> The Kardashians</a>
 		</li>
 		<li className="status"></li>
 		<li className= "counts"> 
