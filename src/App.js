@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import DashCard from "./components/DashCard";
 import Wrapper from "./components/Wrapper";
 import pics from "./pics.json";
@@ -23,6 +24,7 @@ class App extends Component {
 
       <Wrapper>
         <Navbar /> 
+        <Header />
 
         {this.state.pics.map(pics =>(
           <DashCard
