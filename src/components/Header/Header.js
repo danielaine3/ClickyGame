@@ -3,8 +3,9 @@ import "./Header.css";
 
 const Header = props => (
 	<div className="header">
-		<h1>Klicking Up With The Kardashians</h1>
-		<h2>Klick on a pic to earn points, but don't klick any more than once!</h2>
+		<h4>KLICKING UP WITH THE</h4>
+		<h1>KARDASHIANS</h1>
+		<h2>Klick on the fam to earn points, but don't klick anyone more than once!</h2>
 	</div>
 	);
 

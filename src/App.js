@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import DashCard from "./components/DashCard";
 import Wrapper from "./components/Wrapper";
+import DashCard from "./components/DashCard";
 import pics from "./pics.json";
 
 class App extends Component {
