@@ -13,7 +13,7 @@ class App extends Component {
   	score: 0, 
   	topScore: 0, 
   	status: "Go ahead Doll, klick to begin!", 
-    pics: pics,
+    pics: pics
     // clickedPics: []
   }
 
