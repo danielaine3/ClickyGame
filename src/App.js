@@ -7,29 +7,54 @@ import DashCard from "./components/DashCard";
 import pics from "./pics.json";
 
 class App extends Component {
-
-
   //Setting this.state.pics to the pics json array
   state = {
   	score: 0, 
-  	topScore:0, 
-  	status: "Click an image to begin!", 
-    pics: pics
-  };
+  	topScore: 0, 
+  	status: "Go ahead Doll, klick to begin!", 
+    pics: pics,
+    // clickedPics: []
+  }
+
+  // handleClick = id => {
+  // 	if (this.state.clickedPics.includes(id)) {
+  // 		console.log("GameOver")
+  // 		this.setState({
+  // 			clickedPics: [],
+  // 			status: "Klick Klick! Already picked Okuuuur?!",
+  // 			score: 0, 
+  // 			topScore: (this.state.score > this.state.topScore) ? this.state.score : this.state.topScore
+  // 		})
+  // 	} else if (this.state.score === 11) {
+  // 		this.setState({
+  // 			clickedPics: [],
+  // 			status: "Way to keep up Doll! You won!",
+  // 			score: this.state.score + 1, 
+  // 			topScore: (this.state.score +1 > this.state.topScore) ? this.state.score +1 : this.state.topScore
+  // 		})
+  // 	} else {
+  // 		this.setState({
+  // 			clickedPics: [ ...this.state.clickedPics, id],
+  // 			status: "Korrect!",
+  // 			score: this.state.score +1
+  // 		}, () => console.log(`Score: ${this.state.score} Top Score: ${this.state.topScore}`))
+  // 	}
+  // 	this.shuffleCards(pics)
+  // };
 
   markChecked = id => {
   	const imageClicked = this.state.pics.find(image => image.id === id);
 
   	if(imageClicked.clicked) {
-  		let shuffleCards = this.shuffleCards(this.resetPics(this.state.pics));
+  		let shuffledPix = this.shuffleCards(this.resetPics(this.state.pics));
   		this.setState({
   			score:0, 
   			message:"Incorrect!",
-  			pics: shuffleCards
+  			pics: shuffledPix
   		});
   	}else {
   		imageClicked.clicked = true;
-  		let shuffleCards = this.shuffleCards(this.state.pics);
+  		let shuffledPix = this.shuffleCards(this.state.pics);
   		let currentScore = this.state.score +1;
   		let newTopScore = this.state.topScore;
   		if (currentScore > newTopScore)
@@ -47,31 +72,29 @@ class App extends Component {
   				score:currentScore, 
   				topScore: newTopScore,
   				message: "Correct Doll!", 
-  				pics:shuffleCards
+  				pics:shuffledPix
   			});
   		}
   	}
   }
 
-  resetPics = pics => {
-  	pics.forEach( pic => {
+  resetPics = picsArray => {
+  	picsArray.forEach( pic => {
   		pic.clicked = false;
   	});
-  	return pics;
+  	return picsArray;
   }
 
-
-  shuffleCards = pics => {
-  	for (let i =pics.length - 1; i > 0; i--) {
+  shuffleCards = picsArray => {
+  	for (let i =picsArray.length - 1; i > 0; i--) {
   		const j = Math.floor(Math.random()* (i + 1));
-  		[pics[i], pics[j]] = [pics[j], pics[i]];
+  		[picsArray[i], picsArray[j]] = [picsArray[j], picsArray[i]];
   	}
-  	return pics
+  	return picsArray;
   }
 
   render() {
     return (
-
       <Wrapper>
         <Navbar /> 
         <Header />
@@ -80,8 +103,7 @@ class App extends Component {
             id={pics.id}
             key={pics.id}
             image={pics.image}
-            onClick={this.markChecked}
-          />
+            onClick={this.markChecked} />
         ))}
       </Wrapper>
     );
@@ -89,3 +111,4 @@ class App extends Component {
 }
 
 export default App;
+
