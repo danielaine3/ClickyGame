@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import DashCard from "./components/DashCard";
+import Footer from "./components/Footer";
 import pics from "./pics.json";
 
 class App extends Component {
@@ -105,6 +106,7 @@ class App extends Component {
             image={pics.image}
             onClick={this.markChecked} />
         ))}
+        <Footer />
       </Wrapper>
     );
   }
