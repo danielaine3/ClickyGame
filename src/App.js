@@ -14,34 +14,7 @@ class App extends Component {
   	topScore: 0, 
   	status: "Go ahead Doll, klick to begin!", 
     pics: pics
-    // clickedPics: []
   }
-
-  // handleClick = id => {
-  // 	if (this.state.clickedPics.includes(id)) {
-  // 		console.log("GameOver")
-  // 		this.setState({
-  // 			clickedPics: [],
-  // 			status: "Klick Klick! Already picked Okuuuur?!",
-  // 			score: 0, 
-  // 			topScore: (this.state.score > this.state.topScore) ? this.state.score : this.state.topScore
-  // 		})
-  // 	} else if (this.state.score === 11) {
-  // 		this.setState({
-  // 			clickedPics: [],
-  // 			status: "Way to keep up Doll! You won!",
-  // 			score: this.state.score + 1, 
-  // 			topScore: (this.state.score +1 > this.state.topScore) ? this.state.score +1 : this.state.topScore
-  // 		})
-  // 	} else {
-  // 		this.setState({
-  // 			clickedPics: [ ...this.state.clickedPics, id],
-  // 			status: "Korrect!",
-  // 			score: this.state.score +1
-  // 		}, () => console.log(`Score: ${this.state.score} Top Score: ${this.state.topScore}`))
-  // 	}
-  // 	this.shuffleCards(pics)
-  // };
 
   markChecked = id => {
   	const imageClicked = this.state.pics.find(image => image.id === id);
@@ -50,7 +23,7 @@ class App extends Component {
   		let shuffledPix = this.shuffleCards(this.resetPics(this.state.pics));
   		this.setState({
   			score:0, 
-  			message:"Incorrect!",
+  			status:"Incorrect!",
   			pics: shuffledPix
   		});
   	}else {
@@ -72,12 +45,12 @@ class App extends Component {
   			this.setState({
   				score:currentScore, 
   				topScore: newTopScore,
-  				message: "Correct Doll!", 
+  				status: "Korrect Doll!", 
   				pics:shuffledPix
   			});
   		}
   	}
-  }
+}
 
   resetPics = picsArray => {
   	picsArray.forEach( pic => {
@@ -87,7 +60,7 @@ class App extends Component {
   }
 
   shuffleCards = picsArray => {
-  	for (let i =picsArray.length - 1; i > 0; i--) {
+  	for (let i = picsArray.length - 1; i > 0; i--) {
   		const j = Math.floor(Math.random()* (i + 1));
   		[picsArray[i], picsArray[j]] = [picsArray[j], picsArray[i]];
   	}
@@ -97,7 +70,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Navbar /> 
+        <Navbar status={this.state.status} score={this.state.score} topScore={this.state.topScore} /> 
         <Header />
         {this.state.pics.map(pics =>(
           <DashCard
@@ -113,4 +86,3 @@ class App extends Component {
 }
 
 export default App;
-
