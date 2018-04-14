@@ -10,7 +10,6 @@ div {
     margin: 15px 40px;
     border: 5px solid #f1f1f1;
     border-radius: 3px;
-   /* -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);*/
     box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
     cursor: pointer;
 }
@@ -18,9 +17,8 @@ div {
 .card > .img-container {
   height: 100%;
   overflow: hidden;
-
 }
-.card > .img-container > img {
 
+.card > .img-container > img {
   width: 100%
 }

@@ -13,7 +13,7 @@ class App extends Component {
   state = {
   	score: 0, 
   	topScore: 0, 
-  	status: "Go ahead Doll, klick to begin!", 
+  	status: "GO AHEAD DOLL, KLICK TO BEGIN!", 
     pics: pics
   }
 
@@ -24,7 +24,7 @@ class App extends Component {
   		let shuffledPix = this.shuffleCards(this.resetPics(this.state.pics));
   		this.setState({
   			score:0, 
-  			status:"Inkorrect, kan't you keep up?",
+  			status:"INKORRECT, KAN'T YOU KEEP UP?",
   			pics: shuffledPix
   		});
   	}else {
@@ -39,14 +39,15 @@ class App extends Component {
   			this.setState({
   				score: 0,
   				topScore: 12,
-  				status: "Kongrats! You won!", 
+  				status: "KONGRATS! YOU WON!", 
   				pics: this.resetPics(this.state.pics)
   			});
+        
   		}else {
   			this.setState({
   				score:currentScore, 
   				topScore: newTopScore,
-  				status: "Korrect Doll!", 
+  				status: "KORRECT DOLL!", 
   				pics:shuffledPix
   			});
   		}
