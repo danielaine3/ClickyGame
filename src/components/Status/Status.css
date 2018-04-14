@@ -1,0 +1,35 @@
+.statusbar {
+	display:flex;
+	height:100px;
+	width: 100%;
+	background-color: #255DC3;	
+}
+
+ul {
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+
+}
+
+li {
+	font-size: 20px;
+	color:#FFFFFF;
+}
+
+.status {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 40px;
+	font-weight:bold;
+	color:#D85927;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.counts {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 30px;
+	width:33%;
+	margin-top: 30px;
+}

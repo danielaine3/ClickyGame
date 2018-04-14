@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import Status from "./components/Status";
 import Wrapper from "./components/Wrapper";
 import DashCard from "./components/DashCard";
 import Footer from "./components/Footer";
@@ -17,17 +18,17 @@ class App extends Component {
   }
 
   markChecked = id => {
-  	const imageClicked = this.state.pics.find(image => image.id === id);
+  	const picClicked = this.state.pics.find(image => image.id === id);
 
-  	if(imageClicked.clicked) {
+  	if(picClicked.clicked) {
   		let shuffledPix = this.shuffleCards(this.resetPics(this.state.pics));
   		this.setState({
   			score:0, 
-  			status:"Incorrect!",
+  			status:"Inkorrect, kan't you keep up?",
   			pics: shuffledPix
   		});
   	}else {
-  		imageClicked.clicked = true;
+  		picClicked.clicked = true;
   		let shuffledPix = this.shuffleCards(this.state.pics);
   		let currentScore = this.state.score +1;
   		let newTopScore = this.state.topScore;
@@ -38,7 +39,7 @@ class App extends Component {
   			this.setState({
   				score: 0,
   				topScore: 0,
-  				message: "Winner!", 
+  				message: "Kongrats! You won!", 
   				pics: this.resetPics(this.state.pics)
   			});
   		}else {
@@ -70,8 +71,9 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Navbar status={this.state.status} score={this.state.score} topScore={this.state.topScore} /> 
+      	<Navbar />
         <Header />
+        <Status status={this.state.status} score={this.state.score} topScore={this.state.topScore} /> 
         {this.state.pics.map(pics =>(
           <DashCard
             id={pics.id}
