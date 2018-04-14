@@ -35,11 +35,11 @@ class App extends Component {
   		if (currentScore > newTopScore)
   			newTopScore = currentScore;
 
-  		if (currentScore === 12 &&  newTopScore === 12) {
+  		if (currentScore === 12) {
   			this.setState({
   				score: 0,
-  				topScore: 0,
-  				message: "Kongrats! You won!", 
+  				topScore: 12,
+  				status: "Kongrats! You won!", 
   				pics: this.resetPics(this.state.pics)
   			});
   		}else {
