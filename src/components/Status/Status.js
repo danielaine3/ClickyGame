@@ -4,7 +4,7 @@ import "./Status.css";
 const Status = props => (
 	<ul className="statusbar">
 		<li className="status">{props.status}</li>
-		<li className= "counts">SCORE:{props.score} | TOP SCORE:{props.topScore}</li>
+		<li className= "counts">SCORE: {props.score} | TOP SCORE: {props.topScore}</li>
 	</ul>
 );
 
