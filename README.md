@@ -20,3 +20,6 @@ If you select all twelve in the fam without repeating, a message of "Kongrats! Y
 * React
 * React-dom
 * React-Scripts
+
+## Start
+* yarn start
