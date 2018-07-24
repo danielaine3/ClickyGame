@@ -20,3 +20,21 @@ If you select all twelve in the fam without repeating, a message of "Kongrats! Y
 * React
 * React-dom
 * React-Scripts
+
+
+
+## Deployment (Heroku)
+
+After confirming that you have an up to date git repository and a Heroku app created, complete the following:
+
+1. Build the React app for production by running the following command:
+
+```
+yarn build
+```
+
+2. Add and commit all changes to git
+
+3. Push to Heroku
+
+If all previous steps were followed correctly, your application should be deployed to Heroku!
